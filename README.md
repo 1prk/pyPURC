@@ -8,7 +8,7 @@ A Python implementation of the PURC (Perturbed Utility Route Choice) model for n
 
 ## Overview
 
-pyPURC implements the mathematical framework described in **Fosgerau, Paulsen, Rasmussen** (Transportation Research Part C, 2022) for route choice modeling with entropy perturbation. The package provides:
+pyPURC implements the mathematical framework described in **Fosgerau, Paulsen, Rasmussen** (Transportation Research Part C, 2022) for route choice modeling with entropy perturbation. This package reproduces the perturbed utility route choice model where traveler behavior is represented as utility maximizing flow assignment across networks under flow conservation constraints. The package provides:
 
 - **Exact mathematical implementation** of the PURC optimization problem
 - **KKT condition verification** with numerical precision < 1e-12
@@ -431,15 +431,6 @@ The `tests/gold/` directory contains canonical examples:
 - `toy_network.json`: 3-node network from the paper
 - `table1.json`: Expected results for validation
 
-### Jupyter Notebooks
-
-See `examples/` directory for detailed tutorials:
-
-- `basic_usage.ipynb`: Getting started guide
-- `osm_integration.ipynb`: Real-world network processing
-- `parameter_estimation.ipynb`: Advanced econometric analysis
-- `sensitivity_analysis.ipynb`: Model validation techniques
-
 ## Troubleshooting
 
 ### Common Issues
@@ -511,11 +502,16 @@ All implementations must:
 If you use pyPURC in research, please cite:
 
 ```bibtex
-@article{fosgerau2022purc,
-  title={Perturbed Utility Route Choice},
-  author={Fosgerau, M. and Paulsen, T. and Rasmussen, T.K.},
-  journal={Transportation Research Part C},
-  year={2022}
+@article{fosgerau2022perturbed,
+  title={A perturbed utility route choice model},
+  author={Fosgerau, Mogens and Paulsen, Mads and Rasmussen, Thomas Kjær},
+  journal={Transportation Research Part C: Emerging Technologies},
+  volume={136},
+  pages={103514},
+  year={2022},
+  issn={0968-090X},
+  doi={10.1016/j.trc.2021.103514},
+  url={https://www.sciencedirect.com/science/article/pii/S0968090X21004976}
 }
 ```
 
@@ -525,20 +521,21 @@ MIT License - see LICENSE file for details.
 
 ## References
 
-1. **Fosgerau, M., Paulsen, T., Rasmussen, T.K.** (2022). "Perturbed Utility Route Choice." *Transportation Research Part C*.
+1. **Fosgerau, M., Paulsen, M., Rasmussen, T.K.** (2022). "A perturbed utility route choice model." *Transportation Research Part C: Emerging Technologies*, 136, 103514. https://doi.org/10.1016/j.trc.2021.103514
 
-2. **Mathematical specifications**: See `prompts/` directory for detailed technical documentation.
+2. **NetworkX documentation**: https://networkx.org/
 
-3. **NetworkX documentation**: https://networkx.org/
-
-4. **SciPy optimization**: https://docs.scipy.org/doc/scipy/reference/optimize.html
+3. **SciPy optimization**: https://docs.scipy.org/doc/scipy/reference/optimize.html
 
 ## Support
 
 - **Issues**: GitHub issue tracker
-- **Documentation**: See `prompts/` directory for technical specifications  
 - **Examples**: `tests/` directory contains working examples
 - **API Reference**: Docstrings in source code
+
+## Transparency Disclaimer
+
+This implementation was developed with assistance from agentic Large Language Models (LLMs) to reproduce the mathematical framework and algorithms described in the original research paper. The implementation follows the exact specifications and mathematical formulations from Fosgerau, Paulsen, and Rasmussen (2022), with all numerical results validated against published benchmarks to ensure scientific accuracy and reproducibility.
 
 ---
 
