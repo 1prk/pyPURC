@@ -1,0 +1,12 @@
+{
+  "nodes": ["O", "M", "D"],
+  "edges": [
+    { "id": 1, "tail": "O", "head": "M", "length": 2.0, "u": -1.0 },
+    { "id": 2, "tail": "O", "head": "D", "length": 1.0, "u": -1.0 },
+    { "id": 3, "tail": "M", "head": "D", "length": 1.0, "u": -1.0 },
+    { "id": 4, "tail": "M", "head": "D", "length": 1.0, "u": -1.0 },
+    { "id": 5, "tail": "D", "head": "O", "length": 1.0, "u": -1.0 },
+    { "id": 6, "tail": "D", "head": "O", "length": 2.0, "u": -2.0 }
+  ],
+  "od": { "origin": "O", "destination": "D" }
+}
